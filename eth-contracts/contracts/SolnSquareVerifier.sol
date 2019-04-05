@@ -18,14 +18,14 @@ struct solution {
 // TODO define an array of the above struct
 
  // TODO define a mapping to store unique solutions submitted
-mapping(address => solution) private solutions;
+mapping(bytes32 => solution) private solutions;
 // TODO Create an event to emit when a solution is added
     event solutionWasAdded(address solution);
 // TODO Create a function to add the solutions to the array and emit the event
 
-function addSolution( address Address, uint256 Id) public {
+function addSolution( address Address, uint256 Id, bytes32 solutionHash) public {
     
-         solutions[Address] = solution({
+         solutions[solutionHash] = solution({
                                         Id: Id,
                                         Address: Address
                                 });
@@ -59,9 +59,13 @@ function addSolution( address Address, uint256 Id) public {
         ) public returns (bool) {
          
          require(contractVerifier.verifyTx(a, a_p, b, b_p, c, c_p, h, k, input), "solution is not valid");
- 
-        require(solutions[Address].Address != Address, "solution exists");
-        addSolution( Address, Id);
+
+        // require(solutions[Address].Address != Address, "solution exists");
+
+        //hash submitted solution solution 
+        bytes32 solutionHash = keccak256(abi.encodePacked(a, a_p, b, b_p, c, c_p, h, k, input));
+        require(solutions[solutionHash].Address == address(0), "solution exists");
+        addSolution( Address, Id,solutionHash);
         return mint(Address, Id, "url");
     }
   

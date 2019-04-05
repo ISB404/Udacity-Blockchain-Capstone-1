@@ -18,23 +18,23 @@ Contract Address:
 
  Deploying 'Verifier'
    --------------------
-   > transaction hash:    0x37c5e4c750808cd462f9e4ae0700ef95cbbd70f97c199a5db207023c7b31e318
-   > contract address:    0xeA44D48c9524D16f937cc73CC27D3A65aB9AdA49
+   > transaction hash:    0xa00168bbdc7c979220b4e44d8fbe35388242682e9862830c5f65a4cff9138335
+   > contract address:    0x2f48e53c3590Dcdef45f96847b0fe368c20b2155
    > account:             0x854AEA2dF207be01a0808c95468a37F2231290c9
 
 Deploying 'SolnSquareVerifier'
    ------------------------------
-   > transaction hash:    0x2fcb192aae872482e897ab02c26cb4365b5fc00e15cc0897795c7623302ebf3a
-   > contract address:    0xA5a4ADd7061dED9794611cdD51e71a8358e3282c
+   > transaction hash:    0x86ad309c130891f33cb005ebd95a3a6153198e912fa2e388dbedbf2ef684467f
+   > contract address:    0xe8eC6f2448a81BC570329483C99a4223Ea453963
    > account:             0x854AEA2dF207be01a0808c95468a37F2231290c9
 
 Contract Abi's:
 /eth-contract/build/contracts/meshalContract.json 
 
 OpenSea MarketPlace Storefront link's:
-https://rinkeby.opensea.io/assets/0xa5a4add7061ded9794611cdd51e71a8358e3282c/1
-https://rinkeby.opensea.io/accounts/0x854aea2df207be01a0808c95468a37f2231290c9
+https://rinkeby.opensea.io/category/meshalcontractv4
 
+ 
 
 # Project Resources
 
